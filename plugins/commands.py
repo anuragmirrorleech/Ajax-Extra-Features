@@ -24,7 +24,13 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('🤖𝙿𝚁𝙸𝚅𝙰𝚃𝙴 𝙱𝙾𝚃🤖', url=f"https://t.me/HAASHIM_999")
             ],[
-            InlineKeyboardButton('⚡MOVIE CHANNEL⚡', url=f"https://t.me/+0pCrKKfTCAZlYmZl")
+            InlineKeyboardButton('𝙼𝙾𝚅𝙸𝙴𝚂 𝙲𝙷𝙰𝙽𝙽𝙴𝙻', url=f"https://t.me/+0pCrKKfTCAZlYmZl")
+            ],[
+            InlineKeyboardButton('𝙼𝙾𝚅𝙸𝙴 𝚁𝙴𝚀𝚄𝙴𝚂𝚃 𝙶𝚁𝙾𝚄𝙿', url=f"https://t.me/TrockersDiscussions")
+            ],[
+            InlineKeyboardButton('𝚄𝙿𝙳𝙰𝚃𝙴𝙳 𝙲𝙷𝙰𝙽𝙽𝙴𝙻', url=f"https://t.me/TrockersUpdates")
+            ],[
+            InlineKeyboardButton('𝚂𝚄𝙿𝙿𝙾𝚁𝚃 𝙶𝚁𝙾𝚄𝙿', url=f"https://t.me/TrockersSupport")
             ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply(script.PRIVATEBOT_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup)
