@@ -21,11 +21,11 @@ BATCH_FILES = {}
 @Client.on_message(filters.command("start"))
 async def start(client, message):
     if message.chat.type in ['group', 'supergroup']:
-        buttons = [
-            [
-                InlineKeyboardButton('𝙿𝚁𝙸𝚅𝙰𝚃𝙴 𝙱𝙾𝚃', url=f"https://t.me/Aadhi011")
-            ]
-            ]
+        buttons = [[
+            InlineKeyboardButton('🤖𝙿𝚁𝙸𝚅𝙰𝚃𝙴 𝙱𝙾𝚃🤖', url=f"https://t.me/HAASHIM_999")
+            ],[
+            InlineKeyboardButton('⚡MOVIE CHANNEL⚡', url=f"https://t.me/+0pCrKKfTCAZlYmZl")
+            ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply(script.PRIVATEBOT_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup)
         await asyncio.sleep(2) # 😢 https://github.com/Aadhi000/Ajax-Extra-Features/blob/master/plugins/p_ttishow.py#L17 😬 wait a bit, before checking.
@@ -73,7 +73,7 @@ async def start(client, message):
             btn.append([InlineKeyboardButton("🔁 𝐓𝐫𝐲 𝐀𝐠𝐚𝐢𝐧 🔁", callback_data=f"checksub#{message.command[1]}")])
         await client.send_message(
             chat_id=message.from_user.id,
-            text="**𝑱𝒐𝒊𝒏 𝑶𝒖𝒓 𝑴𝒐𝒗𝒊𝒆 𝑼𝒑𝒅𝒂𝒕𝒆𝒔 𝑪𝒉𝒂𝒏𝒏𝒆𝒍 𝑻𝒐 𝑼𝒔𝒆 𝑻𝒉𝒊𝒔 𝑩𝒐𝒕!**",
+            text="**JOIN OUR TrockersLinks TO USE THIS BOT🤖!**",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode="markdown"
             )
