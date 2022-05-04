@@ -10,7 +10,7 @@ from plugins.helper_functions.cust_p_filters import f_onw_fliter
 # -- Constants -- #
 ALIVE = "TO CHECK I AM ALIVE" 
 CHANNEL = "<b>𝚄𝙿𝙳𝙰𝚃𝙴𝚂 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ›› https://t.me/TrockerUpdates</b>"
-Trocker = "<b>𝙱𝙾𝚃 ›› https://t.me/Devil0Bot_Bot</b>"
+Trocker = "<b>𝙱𝙾𝚃 ›› https://t.me/trocker_Bot</b>"
 # -- Constants End -- #
 
 
