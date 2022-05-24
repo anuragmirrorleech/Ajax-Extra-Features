@@ -76,10 +76,12 @@ async def start(client, message):
         ]
 
         if message.command[1] != "subscribe":
-            btn.append([InlineKeyboardButton("🔃 ᴛʀʏ ᴀɢᴀɪɴ 🔃", callback_data=f"checksub#{message.command[1]}")])
+            kk, file_id = message.command[1].split("_", 1)
+            pre = 'checksubp' if kk == 'filep' else 'checksub' 
+            btn.append([InlineKeyboardButton(" 🔄 ᴛʀʏ ᴀɢᴀɪɴ", callback_data=f"{pre}#{file_id}")])
         await client.send_message(
             chat_id=message.from_user.id,
-            text="**JOIN OUR TrockersLinks TO USE THIS BOT🤖!**",
+            text="**ʜᴇʏ , ᴊᴏɪɴ ᴛʜᴇ ᴛʀᴏᴄᴋᴇʀsʟɪɴᴋs ᴄʜᴀɴɴᴇʟ ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ᴍᴏᴠɪᴇ !**",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode="markdown"
             )
