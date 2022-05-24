@@ -76,7 +76,7 @@ async def start(client, message):
         ]
 
         if message.command[1] != "subscribe":
-            btn.append([InlineKeyboardButton("🔁 𝐓𝐫𝐲 𝐀𝐠𝐚𝐢𝐧 🔁", callback_data=f"{pre}#{file_id}")])
+            btn.append([InlineKeyboardButton("🔃 ᴛʀʏ ᴀɢᴀɪɴ 🔃", callback_data=f"checksub#{message.command[1]}")])
         await client.send_message(
             chat_id=message.from_user.id,
             text="**JOIN OUR TrockersLinks TO USE THIS BOT🤖!**",
