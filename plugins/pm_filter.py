@@ -461,12 +461,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
             f_caption = f"{files.file_name}"
 
         try:
+            if try:
             if AUTH_CHANNEL and not await is_subscribed(client, query):
                 dulink = await get_shortlink(f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
+                print(dulink)
                 await query.answer(url=dulink)
                 return
             elif settings['botpm']:
                 dulink = await get_shortlink(f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
+                print(dulink)
                 await query.answer(url=dulink)
                 return
             else:
@@ -478,16 +481,18 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 )
                 await query.answer('Check PM, I have sent files in pm', show_alert=True)
         except UserIsBlocked:
-            await query.answer('You Are Blocked to use me', show_alert=True)
+            await query.answer('Unblock the bot mahn !', show_alert=True)
         except PeerIdInvalid:
             dulink = await get_shortlink(f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
-                await query.answer(url=dulink)
+            print(dulink)
+            await query.answer(url=dulink)
         except Exception as e:
             dulink = await get_shortlink(f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
-                await query.answer(url=dulink)
+            print(dulink)
+            await query.answer(url=dulink)
     elif query.data.startswith("checksub"):
         if AUTH_CHANNEL and not await is_subscribed(client, query):
-            await query.answer("I Like Your Smartness, But Don't Be Oversmart Okay", show_alert=True)
+            await query.answer("I Like Your Smartness, But Don't Be Oversmart 😒", show_alert=True)
             return
         ident, file_id = query.data.split("#")
         files_ = await get_file_details(file_id)
